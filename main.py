@@ -45,7 +45,7 @@ root.geometry("400x400+200+150")
 root.resizable(False, False)
 
 text_label = ttk.Label(text="Файл с текстом", font=("Arial", 14))
-text_label.pack()
+text_label.pack(pady=10)
 
 text_entry = ttk.Entry(justify=CENTER)
 text_entry.pack()
@@ -60,13 +60,13 @@ cryptMode = StringVar(value="E")
 
 encodeOption = ttk.Radiobutton(
     text="Закодировать", value="E", variable=cryptMode)
-encodeOption.pack()
+encodeOption.pack(ipady=5)
 
 decodeOption = ttk.Radiobutton(
     text="Декодировать", value="D", variable=cryptMode)
 decodeOption.pack()
 
 btn = ttk.Button(text="Пуск", command=click_button)
-btn.pack()
+btn.pack(pady=10)
 
 root.mainloop()
